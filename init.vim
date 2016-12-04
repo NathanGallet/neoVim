@@ -114,13 +114,13 @@ nnoremap <F8> :TagbarToggle<CR>
 nnoremap <silent> <F7> :CtrlPTag<cr>
 
 " NerdTree
-nnoremap <F6> :NERDTreeToggle<cr>
+nnoremap <F2> :NERDTreeToggle<cr>
 
 set splitbelow
 
 " Teminal
 :tnoremap jk <C-\><C-n>
-:nnoremap <F5> :sp term://zsh<cr>i
+:nnoremap <F3> :sp term://zsh<cr>i
 :tnoremap <A-h> <C-\><C-n><C-w>h
 :tnoremap <A-j> <C-\><C-n><C-w>j
 :tnoremap <A-k> <C-\><C-n><C-w>k

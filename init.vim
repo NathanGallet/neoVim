@@ -73,6 +73,8 @@ nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt
 nnoremap <leader>3 3gt
 nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
 
 "ClipBoard settings
 set clipboard=unnamed
@@ -86,7 +88,6 @@ inoremap ,a à
 inoremap ,c ç
 
 set scrolloff=200
-
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }

@@ -3,7 +3,6 @@ filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
 
-
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
@@ -24,7 +23,7 @@ map <leader> <Plug>(easymotion-prefix)
 xmap ga <Plug>(EasyAlign)
 
 set t_Co=256
-colorscheme molokai
+colorscheme OceanicNext
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -120,8 +119,8 @@ nnoremap <F6> :NERDTreeToggle<cr>
 set splitbelow
 
 " Teminal
-:nnoremap <F5> :sp term://<cr>i
 :tnoremap jk <C-\><C-n>
+:nnoremap <F5> :sp term://zsh<cr>i
 :tnoremap <A-h> <C-\><C-n><C-w>h
 :tnoremap <A-j> <C-\><C-n><C-w>j
 :tnoremap <A-k> <C-\><C-n><C-w>k
@@ -131,6 +130,5 @@ set splitbelow
 :nnoremap <C-j> <C-w>j
 :nnoremap <C-k> <C-w>k
 :nnoremap <C-l> <C-w>l
-:nnoremap <F5> :sp term://zsh<cr>
 :nnoremap <leader>q :q<CR>
 

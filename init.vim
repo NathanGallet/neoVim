@@ -23,7 +23,8 @@ map <leader> <Plug>(easymotion-prefix)
 xmap ga <Plug>(EasyAlign)
 
 set t_Co=256
-colorscheme OceanicNext
+set synmaxcol=300000
+colorscheme OceanicNext 
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -33,7 +34,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 " " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 let mapleader=" "
-
+set synmaxcol=200
 syntax enable
 set nu
 set mouse=a
@@ -87,12 +88,13 @@ inoremap ,3 è
 inoremap ,a à
 inoremap ,c ç
 
-set scrolloff=200
+set scrolloff=20
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 set laststatus=2
 
+set nocursorline
 "setlocal spell spelllang=en
 autocmd BufEnter *.tex set spell
 nnoremap <leader>c z=
@@ -103,7 +105,7 @@ inoremap ,, <esc>mz[sz=1<CR>`za
 nnoremap <leader>d yyp
 
 "Go to next TODO
-nnoremap <leader>t :/TODO<CR>
+nnoremap <leader>t :tabe<cr>
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1

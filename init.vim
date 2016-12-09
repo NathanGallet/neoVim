@@ -19,7 +19,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
 call plug#end()
 
-map <leader> <Plug>(easymotion-prefix)
 xmap ga <Plug>(EasyAlign)
 
 set t_Co=256
@@ -94,7 +93,6 @@ let g:lightline = {
       \ }
 set laststatus=2
 
-set nocursorline
 "setlocal spell spelllang=en
 autocmd BufEnter *.tex set spell
 nnoremap <leader>c z=
@@ -111,7 +109,7 @@ nnoremap <leader>t :tabe<cr>
 let g:deoplete#enable_at_startup = 1
 
 " Tagbar Toggle
-nnoremap <F8> :TagbarToggle<CR>
+nnoremap <leader>o :TagbarToggle<CR>
 
 " CtrlP + CTAGS
 nnoremap <silent> <F7> :CtrlPTag<cr>
@@ -134,4 +132,8 @@ set splitbelow
 :nnoremap <C-k> <C-w>k
 :nnoremap <C-l> <C-w>l
 :nnoremap <leader>q :q<CR>
+:nnoremap <leader>Q :q!<CR>
+:nnoremap <leader>md :m +
+:nnoremap <leader>mu :m -
 
+map <leader> <Plug>(easymotion-prefix)

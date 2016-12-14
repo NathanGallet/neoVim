@@ -17,12 +17,13 @@ Plug 'tpope/vim-commentary'
 Plug 'DoxygenToolkit.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 xmap ga <Plug>(EasyAlign)
 
 set t_Co=256
-set synmaxcol=300000
 colorscheme OceanicNext 
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
@@ -61,7 +62,7 @@ inoremap jk <esc>
 inoremap <Nul> <C-n>
 
 nnoremap <leader>s :w<CR>
-nnoremap <leader>e :tabe ~/.config/nvim/init.vim<CR>G
+nnoremap <leader>e :tabe ~/.config/nvim/init.vim<CR>
 nnoremap <leader>r :source ~/.config/nvim/init.vim<CR>
 
 "j and k movemements
@@ -115,7 +116,7 @@ nnoremap <leader>o :TagbarToggle<CR>
 nnoremap <silent> <F7> :CtrlPTag<cr>
 
 " NerdTree
-nnoremap <F2> :NERDTreeToggle<cr>
+nnoremap <leader>i :NERDTreeToggle<cr>
 
 set splitbelow
 
@@ -137,3 +138,4 @@ set splitbelow
 :nnoremap <leader>mu :m -
 
 map <leader> <Plug>(easymotion-prefix)
+set synmaxcol=300000

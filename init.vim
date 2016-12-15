@@ -122,20 +122,19 @@ set splitbelow
 
 " Teminal
 :tnoremap jk <C-\><C-n>
-:nnoremap <F3> :sp term://zsh<cr>i
+:nnoremap <F3> :sp term://zsh<cr>
 :tnoremap <A-h> <C-\><C-n><C-w>h
 :tnoremap <A-j> <C-\><C-n><C-w>j
 :tnoremap <A-k> <C-\><C-n><C-w>k
 :tnoremap <A-l> <C-\><C-n><C-w>l
 " move between tabs 
-:nnoremap <C-h> <C-w>h
 :nnoremap <C-j> <C-w>j
+:nnoremap <C-h> <C-w>h
 :nnoremap <C-k> <C-w>k
 :nnoremap <C-l> <C-w>l
 :nnoremap <leader>q :q<CR>
 :nnoremap <leader>Q :q!<CR>
-:nnoremap <leader>md :m +
-:nnoremap <leader>mu :m -
-
 map <leader> <Plug>(easymotion-prefix)
 set synmaxcol=300000
+:nnoremap <C-A-k> :m -1<cr>
+:nnoremap <C-A-j> :m +1<cr>

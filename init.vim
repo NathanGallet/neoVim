@@ -50,7 +50,6 @@ set showmatch
 
 set relativenumber
 
-"Todo: FIX"
 set incsearch
 set nohlsearch
 nnoremap <leader>s :nohlsearch<CR>
@@ -76,17 +75,12 @@ nnoremap <leader>3 3gt
 nnoremap <leader>4 4gt
 nnoremap <leader>5 5gt
 nnoremap <leader>6 6gt
+nnoremap <leader>- :!ctags -R .<cr>
 
 "ClipBoard settings
 set clipboard=unnamed
 nnoremap <leader>p :r !pbpaste<CR>
 nnoremap <leader>y :.!pbcopy<CR>u
-
-" Accents
-inoremap ,e é
-inoremap ,3 è
-inoremap ,a à
-inoremap ,c ç
 
 set scrolloff=20
 let g:lightline = {
@@ -102,8 +96,6 @@ inoremap ,, <esc>mz[sz=1<CR>`za
 
 "Duplicate line
 nnoremap <leader>d yyp
-
-"Go to next TODO
 nnoremap <leader>t :tabe<cr>
 
 " Use deoplete.
@@ -122,7 +114,7 @@ set splitbelow
 
 " Teminal
 :tnoremap jk <C-\><C-n>
-:nnoremap <F3> :sp term://zsh<cr>i
+:nnoremap <F3> :sp term://zsh<cr>
 :tnoremap <A-h> <C-\><C-n><C-w>h
 :tnoremap <A-j> <C-\><C-n><C-w>j
 :tnoremap <A-k> <C-\><C-n><C-w>k

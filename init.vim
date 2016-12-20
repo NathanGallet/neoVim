@@ -120,10 +120,10 @@ set splitbelow
 :tnoremap <A-k> <C-\><C-n><C-w>k
 :tnoremap <A-l> <C-\><C-n><C-w>l
 " move between tabs 
-:nnoremap <C-h> <C-w>h
-:nnoremap <C-j> <C-w>j
-:nnoremap <C-k> <C-w>k
-:nnoremap <C-l> <C-w>l
+:nnoremap <C-h> <C-W>h<C-W>
+:nnoremap <C-j> <C-W>j<C-W>
+:nnoremap <C-k> <C-W>k<C-W>
+:nnoremap <C-l> <C-W>l<C-W>
 :nnoremap <leader>q :q<CR>
 :nnoremap <leader>Q :q!<CR>
 :nnoremap <leader>md :m +

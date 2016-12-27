@@ -31,6 +31,9 @@ let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 
+" Remove automatically trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+
 " " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 let mapleader=" "
@@ -41,7 +44,7 @@ set mouse=a
 
 set shiftwidth=2
 set tabstop=2
-set softtabstop=2
+set tabstop=2
 set cursorline
 filetype indent on
 set wildmenu
@@ -76,6 +79,7 @@ nnoremap <leader>4 4gt
 nnoremap <leader>5 5gt
 nnoremap <leader>6 6gt
 nnoremap <leader>- :!ctags -R .<cr>
+nnoremap <leader>< :set list lcs=tab:\-\|<cr>
 
 "ClipBoard settings
 set clipboard=unnamed

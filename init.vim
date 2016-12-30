@@ -18,13 +18,14 @@ Plug 'DoxygenToolkit.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
 Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
 xmap ga <Plug>(EasyAlign)
 
 set t_Co=256
-colorscheme OceanicNext 
+" colorscheme OceanicNext
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -39,6 +40,8 @@ let g:UltiSnipsEditSplit="vertical"
 let mapleader=" "
 set synmaxcol=200
 syntax enable
+set background=dark
+colorscheme solarized
 set nu
 set mouse=a
 
@@ -79,7 +82,6 @@ nnoremap <leader>4 4gt
 nnoremap <leader>5 5gt
 nnoremap <leader>6 6gt
 nnoremap <leader>- :!ctags -R .<cr>
-nnoremap <leader>< :set list lcs=tab:\-\|<cr>
 
 "ClipBoard settings
 set clipboard=unnamed
@@ -123,7 +125,7 @@ set splitbelow
 :tnoremap <A-j> <C-\><C-n><C-w>j
 :tnoremap <A-k> <C-\><C-n><C-w>k
 :tnoremap <A-l> <C-\><C-n><C-w>l
-" move between tabs 
+" move between tabs
 :nnoremap <C-h> <C-W>h<C-W>
 :nnoremap <C-j> <C-W>j<C-W>
 :nnoremap <C-k> <C-W>k<C-W>

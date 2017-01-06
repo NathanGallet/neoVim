@@ -20,6 +20,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'mileszs/ack.vim'
+Plug 'Townk/vim-autoclose'
 
 call plug#end()
 

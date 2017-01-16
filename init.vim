@@ -20,6 +20,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'mileszs/ack.vim'
+Plug 'jistr/vim-nerdtree-tabs'
 
 call plug#end()
 
@@ -89,7 +90,7 @@ set clipboard=unnamed
 nnoremap <leader>p :r !pbpaste<CR>
 nnoremap <leader>y :.!pbcopy<CR>u
 
-set scrolloff=20
+set scrolloff=30
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
@@ -107,6 +108,7 @@ nnoremap <leader>t :tabe<cr>
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " Tagbar Toggle
 nnoremap <leader>o :TagbarToggle<CR>
@@ -115,7 +117,7 @@ nnoremap <leader>o :TagbarToggle<CR>
 nnoremap <silent> <F7> :CtrlPTag<cr>
 
 " NerdTree
-nnoremap <leader>i :NERDTreeToggle<cr>
+nnoremap <leader>i :NERDTreeTabsToggle<cr>
 
 set splitbelow
 

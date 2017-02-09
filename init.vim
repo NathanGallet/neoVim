@@ -21,6 +21,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'mileszs/ack.vim'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'evidens/vim-twig'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 

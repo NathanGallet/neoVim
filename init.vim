@@ -23,7 +23,6 @@ Plug 'mileszs/ack.vim'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'evidens/vim-twig'
 Plug 'tpope/vim-fugitive'
-Plug 'yggdroot/indentline'
 Plug 'pangloss/vim-javascript'
 
 call plug#end()

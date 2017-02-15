@@ -24,6 +24,8 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'evidens/vim-twig'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'tyrannicaltoucan/vim-quantum'
 
 call plug#end()
 
@@ -36,6 +38,7 @@ set t_Co=256
 let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+let g:jsx_ext_required = 0
 
 " Remove automatically trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
@@ -46,7 +49,7 @@ let mapleader=" "
 set synmaxcol=200
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme quantum
 set nu
 set mouse=a
 

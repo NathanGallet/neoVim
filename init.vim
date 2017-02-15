@@ -36,6 +36,9 @@ let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 
+" Fix nerdtreetabs display
+let g:nerdtree_tabs_synchronize_view = 0
+
 " Remove automatically trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 

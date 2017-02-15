@@ -26,6 +26,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
@@ -39,6 +40,7 @@ let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 let g:jsx_ext_required = 0
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.html.twig,*.js"
 
 " Fix nerdtreetabs display
 let g:nerdtree_tabs_synchronize_view = 0

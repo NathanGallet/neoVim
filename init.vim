@@ -45,7 +45,7 @@ let mapleader=" "
 set synmaxcol=200
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme OceanicNext
 set nu
 set mouse=a
 

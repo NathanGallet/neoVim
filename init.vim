@@ -12,21 +12,20 @@ Plug 'valloric/MatchTagAlways'
 Plug 'critiqjo/lldb.nvim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'DoxygenToolkit.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
 Plug 'mileszs/ack.vim'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'evidens/vim-twig'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'tyrannicaltoucan/vim-quantum'
-Plug 'alvan/vim-closetag'
 
 call plug#end()
 
@@ -40,7 +39,6 @@ let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 let g:jsx_ext_required = 0
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.html.twig,*.js"
 
 " Fix nerdtreetabs display
 let g:nerdtree_tabs_synchronize_view = 0
@@ -53,8 +51,7 @@ let g:UltiSnipsEditSplit="vertical"
 let mapleader=" "
 set synmaxcol=200
 syntax enable
-set background=dark
-colorscheme quantum
+colorscheme base16-oceanicnext
 set nu
 set mouse=a
 

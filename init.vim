@@ -42,7 +42,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 let g:jsx_ext_required = 0
 
 " Fix nerdtreetabs display
-let g:nerdtree_tabs_synchronize_view = 0
+" let g:nerdtree_tabs_synchronize_view = 0
 
 " Remove automatically trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e

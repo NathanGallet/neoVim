@@ -21,6 +21,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'mileszs/ack.vim'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -100,7 +103,7 @@ set laststatus=2
 autocmd BufEnter *.tex set spell
 nnoremap <leader>c z=
 nnoremap <leader>z z=1<CR><CR>
-inoremap ,, <esc>mz[sz=1<CR>`za
+inoremap ,, <esc>mz[sz=1<CR>`zx
 
 "Duplicate line
 nnoremap <leader>d yyp

@@ -24,6 +24,8 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 Plug 'Valloric/YouCompleteMe'
+Plug 'evidens/vim-twig'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -46,7 +48,7 @@ let mapleader=" "
 set synmaxcol=200
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme OceanicNext
 set nu
 set mouse=a
 
@@ -86,6 +88,9 @@ nnoremap <leader>3 3gt
 nnoremap <leader>4 4gt
 nnoremap <leader>5 5gt
 nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
 nnoremap <leader>- :!ctags -R .<cr>
 
 "ClipBoard settings

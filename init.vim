@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
+Plug 'critiqjo/lldb.nvim'
 Plug 'kien/ctrlp.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -21,12 +22,14 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
-Plug 'mileszs/ack.vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'fatih/vim-go'
 Plug 'evidens/vim-twig'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'mhinz/vim-startify'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -43,6 +46,11 @@ let g:jsx_ext_required = 0
 
 " Fix nerdtreetabs display
 " let g:nerdtree_tabs_synchronize_view = 0
+
+" research config
+nmap <C-f> <Plug>CtrlSFCwordPath
+let g:ctrlsf_ackprg = 'ag'
+let g:ctrlsf_default_root = 'project'
 
 " Remove automatically trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
@@ -76,7 +84,7 @@ set foldenable
 set foldlevelstart=99
 set foldmethod=indent
 inoremap jk <esc>
-inoremap <Nul> <C-n>
+inoremap <C-space> <C-n>
 
 nnoremap <leader>s :w<CR>
 nnoremap <leader>e :tabe ~/.config/nvim/init.vim<CR>
@@ -104,16 +112,13 @@ nnoremap <leader>p :r !pbpaste<CR>
 nnoremap <leader>y :.!pbcopy<CR>u
 
 set scrolloff=30
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
 set laststatus=2
 
 "setlocal spell spelllang=en
 autocmd BufEnter *.tex set spell
 nnoremap <leader>c z=
 nnoremap <leader>z z=1<CR><CR>
-inoremap ,, <esc>mz[sz=1<CR>`za
+inoremap ,, <esc>mz[sz=1<CR>`zx
 
 "Duplicate line
 nnoremap <leader>d yyp
@@ -152,4 +157,6 @@ set splitbelow
 :nnoremap <leader>mu :m -
 
 map <leader> <Plug>(easymotion-prefix)
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 set synmaxcol=300000

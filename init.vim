@@ -37,6 +37,7 @@ Plug 'majutsushi/tagbar'
 Plug 'dyng/ctrlsf.vim'
 Plug 'evidens/vim-twig'
 Plug 'mhinz/vim-startify'
+" Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -120,11 +121,10 @@ nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
 nnoremap <leader>- :!ctags -R .<cr>
+nnoremap <leader>' :marks<cr>
 
 "ClipBoard settings
 set clipboard=unnamed
-nnoremap <leader>p :r !pbpaste<CR>
-nnoremap <leader>y :.!pbcopy<CR>u
 
 set scrolloff=30
 set laststatus=2
@@ -171,5 +171,4 @@ set splitbelow
 
 map <leader> <Plug>(easymotion-prefix)
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 set synmaxcol=300000

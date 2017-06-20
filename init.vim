@@ -26,7 +26,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 Plug 'gko/vim-coloresque'
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'kien/ctrlp.vim'
 
 Plug 'SirVer/ultisnips'
@@ -47,8 +47,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 set t_Co=256
 colorscheme OceanicNext
-" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 11
-" set encoding=utf-8
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+set encoding=utf-8
 " let g:airline_powerline_fonts = 1
 
 " Airline
@@ -83,7 +83,6 @@ set nu
 set mouse=a
 
 set shiftwidth=2
-set tabstop=2
 set tabstop=2
 set cursorline
 filetype indent on
@@ -170,8 +169,6 @@ set splitbelow
 :nnoremap <C-l> <C-W>l<C-W>
 :nnoremap <leader>q :q<CR>
 :nnoremap <leader>Q :q!<CR>
-:nnoremap <leader>md :m +
-:nnoremap <leader>mu :m -
 
 map <leader> <Plug>(easymotion-prefix)
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>

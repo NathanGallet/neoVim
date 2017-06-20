@@ -1,40 +1,66 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 call plug#begin('~/.vim/plugged')
 
-Plug 'itchyny/lightline.vim'
+" syntax
+Plug 'othree/yajs.vim'
+Plug 'moll/vim-node'
+Plug 'elzr/vim-json'
+Plug '1995eaton/vim-better-javascript-completion'
+
+" colorscheme
+Plug 'valloric/MatchTagAlways'
+Plug 'mhartington/oceanic-next'
+Plug 'Raimondi/delimitMate'
+
+" git helper
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" utils
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'junegunn/vim-easy-align'
+Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
-Plug 'critiqjo/lldb.nvim'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'mattn/emmet-vim'
+Plug 'gko/vim-coloresque'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'kien/ctrlp.vim'
+
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'valloric/MatchTagAlways'
-Plug 'critiqjo/lldb.nvim'
 Plug 'Shougo/deoplete.nvim'
-Plug 'scrooloose/nerdtree'
+Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-commentary'
 Plug 'DoxygenToolkit.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'junegunn/vim-easy-align'
-Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'dyng/ctrlsf.vim'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tpope/vim-fugitive'
-Plug 'fatih/vim-go'
-Plug 'Valloric/YouCompleteMe'
 Plug 'evidens/vim-twig'
 Plug 'mhinz/vim-startify'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
+" colorscheme option
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+set t_Co=256
+colorscheme OceanicNext
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 11
+" set encoding=utf-8
+" let g:airline_powerline_fonts = 1
+
+" Airline
+set noshowmode
+set noswapfile
+
+" EasyAlign
 xmap ga <Plug>(EasyAlign)
 
-set t_Co=256
-" colorscheme OceanicNext
+set nocompatible
+filetype on
+
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -53,9 +79,6 @@ autocmd BufWritePre * %s/\s\+$//e
 let g:UltiSnipsEditSplit="vertical"
 let mapleader=" "
 set synmaxcol=200
-syntax enable
-set background=dark
-colorscheme OceanicNext
 set nu
 set mouse=a
 

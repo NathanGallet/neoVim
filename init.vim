@@ -34,8 +34,6 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim'
 Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'majutsushi/tagbar'
-Plug 'DoxygenToolkit.vim'
-Plug 'altercation/vim-colors-solarized'
 Plug 'dyng/ctrlsf.vim'
 Plug 'evidens/vim-twig'
 Plug 'mhinz/vim-startify'
@@ -49,7 +47,8 @@ set t_Co=256
 colorscheme OceanicNext
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 set encoding=utf-8
-" let g:airline_powerline_fonts = 1
+set termguicolors
+let g:airline_powerline_fonts = 1
 
 " Airline
 set noshowmode

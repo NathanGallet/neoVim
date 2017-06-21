@@ -27,7 +27,7 @@ Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 Plug 'gko/vim-coloresque'
 Plug 'ryanoasis/vim-devicons'
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -42,14 +42,15 @@ Plug 'mhinz/vim-startify'
 call plug#end()
 
 " colorscheme option
+colorscheme OceanicNext
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+let g:airline_powerline_fonts = 1
+hi CursorLineNR guifg=#ffffff
 set t_Co=256
-colorscheme OceanicNext
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 set encoding=utf-8
 set termguicolors
-let g:airline_powerline_fonts = 1
 
 " Airline
 set noshowmode

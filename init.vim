@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " syntax
 Plug 'othree/yajs.vim'
 Plug 'moll/vim-node'
+Plug 'fatih/vim-go'
 Plug 'elzr/vim-json'
 Plug '1995eaton/vim-better-javascript-completion'
 
@@ -100,6 +101,7 @@ nnoremap <leader>s :nohlsearch<CR>
 set foldenable
 set foldlevelstart=99
 set foldmethod=indent
+map <c-p> :FZF<CR>
 inoremap jk <esc>
 inoremap <C-space> <C-n>
 
@@ -123,6 +125,7 @@ nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
 nnoremap <leader>- :!ctags -R .<cr>
 nnoremap <leader>' :marks<cr>
+nnoremap <leader>u za
 
 "ClipBoard settings
 set clipboard=unnamed

@@ -1,11 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
 " syntax
-Plug 'othree/yajs.vim'
-Plug 'moll/vim-node'
 Plug 'fatih/vim-go'
+Plug 'othree/yajs.vim'
 Plug 'elzr/vim-json'
-Plug '1995eaton/vim-better-javascript-completion'
 
 " colorscheme
 Plug 'valloric/MatchTagAlways'
@@ -64,7 +62,6 @@ set nocompatible
 filetype on
 
 " Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
@@ -160,16 +157,16 @@ set splitbelow
 
 " Teminal
 :tnoremap jk <C-\><C-n>
-:nnoremap <F3> :sp term://zsh<cr>
+:nnoremap <F3> :sp term://zsh<cr>i<cr>
 :tnoremap <A-h> <C-\><C-n><C-w>h
 :tnoremap <A-j> <C-\><C-n><C-w>j
 :tnoremap <A-k> <C-\><C-n><C-w>k
 :tnoremap <A-l> <C-\><C-n><C-w>l
 " move between tabs
-:nnoremap <C-h> <C-W>h<C-W>
-:nnoremap <C-j> <C-W>j<C-W>
-:nnoremap <C-k> <C-W>k<C-W>
-:nnoremap <C-l> <C-W>l<C-W>
+:nnoremap <C-h> <C-W>h<cr>
+:nnoremap <C-j> <C-W>j<cr>
+:nnoremap <C-k> <C-W>k<cr>
+:nnoremap <C-l> <C-W>l<cr>
 :nnoremap <leader>q :q<CR>
 :nnoremap <leader>Q :q!<CR>
 

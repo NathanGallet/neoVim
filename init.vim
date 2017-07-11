@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go'
 Plug 'othree/yajs.vim'
 Plug 'elzr/vim-json'
+Plug 'elixir-lang/vim-elixir'
 
 " colorscheme
 Plug 'valloric/MatchTagAlways'

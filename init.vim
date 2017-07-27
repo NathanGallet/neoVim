@@ -5,6 +5,9 @@ Plug 'fatih/vim-go'
 Plug 'othree/yajs.vim'
 Plug 'elzr/vim-json'
 Plug 'elixir-lang/vim-elixir'
+Plug 'autozimu/LanguageClient-neovim'
+Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
+Plug 'Shougo/deoplete.nvim'
 
 " colorscheme
 Plug 'valloric/MatchTagAlways'
@@ -31,13 +34,12 @@ Plug 'junegunn/fzf'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim'
-Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'majutsushi/tagbar'
 Plug 'dyng/ctrlsf.vim'
 Plug 'evidens/vim-twig'
 Plug 'mhinz/vim-startify'
 " Plug 'Yggdroot/indentLine'
+" Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 
 call plug#end()
 
@@ -124,6 +126,7 @@ nnoremap <leader>9 9gt
 nnoremap <leader>- :!ctags -R .<cr>
 nnoremap <leader>' :marks<cr>
 nnoremap <leader>u za
+nnoremap <C-s> :Gstatus<cr>
 
 "ClipBoard settings
 set clipboard=unnamed
@@ -142,6 +145,7 @@ nnoremap <leader>d yyp
 nnoremap <leader>t :tabe<cr>
 
 " Use deoplete.
+set runtimepath+=~/.config/nvim/bundle/deoplete.nvim/
 let g:deoplete#enable_at_startup = 1
 " inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 

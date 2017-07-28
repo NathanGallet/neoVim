@@ -8,6 +8,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'autozimu/LanguageClient-neovim'
 Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'Shougo/deoplete.nvim'
+Plug 'slashmili/alchemist.vim'
 
 " colorscheme
 Plug 'valloric/MatchTagAlways'
@@ -57,6 +58,8 @@ set termguicolors
 " Airline
 set noshowmode
 set noswapfile
+
+set hidden
 
 " EasyAlign
 xmap ga <Plug>(EasyAlign)
@@ -162,7 +165,7 @@ set splitbelow
 
 " Teminal
 :tnoremap jk <C-\><C-n>
-:nnoremap <F3> :sp term://zsh<cr>i<cr>
+:nnoremap <C-i> :sp term://zsh<cr>i<cr>
 :tnoremap <A-h> <C-\><C-n><C-w>h
 :tnoremap <A-j> <C-\><C-n><C-w>j
 :tnoremap <A-k> <C-\><C-n><C-w>k

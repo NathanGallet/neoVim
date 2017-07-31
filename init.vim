@@ -9,11 +9,13 @@ Plug 'autozimu/LanguageClient-neovim'
 Plug 'padawan-php/deoplete-padawan', { 'do': 'composer install' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'slashmili/alchemist.vim'
+Plug 'tpope/vim-projectionist'
+Plug 'c-brenn/phoenix.vim'
 
 " colorscheme
 Plug 'valloric/MatchTagAlways'
-Plug 'mhartington/oceanic-next'
 Plug 'Raimondi/delimitMate'
+Plug 'mhartington/oceanic-next'
 
 " git helper
 Plug 'tpope/vim-fugitive'
@@ -32,20 +34,27 @@ Plug 'mattn/emmet-vim'
 Plug 'gko/vim-coloresque'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf'
+Plug 'sheerun/vim-polyglot'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'neomake/neomake'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'majutsushi/tagbar'
 Plug 'dyng/ctrlsf.vim'
 Plug 'evidens/vim-twig'
 Plug 'mhinz/vim-startify'
-" Plug 'Yggdroot/indentLine'
+Plug 'kshenoy/vim-signature'
+Plug 'majutsushi/tagbar'
+
 " Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 
 call plug#end()
 
 " colorscheme option
 colorscheme OceanicNext
+syntax on
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 let g:airline_powerline_fonts = 1
@@ -60,6 +69,8 @@ set noshowmode
 set noswapfile
 
 set hidden
+
+autocmd! BufWritePost * Neomake
 
 " EasyAlign
 xmap ga <Plug>(EasyAlign)
@@ -127,7 +138,7 @@ nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
 nnoremap <leader>- :!ctags -R .<cr>
-nnoremap <leader>' :marks<cr>
+nnoremap <leader>' :call signature#marker#Purge('all')
 nnoremap <leader>u za
 nnoremap <C-s> :Gstatus<cr>
 
